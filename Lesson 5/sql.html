@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment Submission Form</title>
+    <style>
+        body {
+            text-align: center; /* Center align the form contents */
+            background-image: url(kyu.jpg);
+            background-repeat: no-repeat; /* Disable image repetition */
+            background-size: cover; /* Cover the entire background */
+        }
+    </style>    
+</head>
+<body bgcolor="lightseagreen" text="white">
+    <center><img src="kilele.jpg" height="190" width="50%" /></center>
+    <form method="post" action="sql.php" enctype="multipart/form-data">
+        <fieldset>
+            <legend>ASSIGNMENT SUBMISSION</legend>
+            <p><b>UNIT CODE</b>: 
+                <input type="text" size="20" name="UNITCODE" required>
+            </p>
+            <p><b>UNIT NAME</b>: 
+                <input type="text" size="20" name="UNITNAME" required>
+            </p>
+            <p><b>UPLOAD ASSIGNMENT (Word or PDF)</b>: 
+                <input type="file" name="ASSIGNMENT_FILE" accept=".doc, .docx, .pdf" required>
+            </p>
+            <center>
+                <p>
+                    <input type="submit" value="SUBMIT ASSIGNMENT" />
+                </p>
+            </center>
+        </fieldset>
+    </form>
+    
+</body>
+</html>

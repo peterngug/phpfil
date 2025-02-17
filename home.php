@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Employee Wage Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Level Checker</title>
 </head>
 <body>
-    <h2>Employee Wage Calculator</h2>
-    <form method="post">
-        <label for="hours">Enter Number of Hours Worked:</label>
-        <input type="number" id="hours" name="hours" required><br><br>
-        <input type="submit" name="submit" value="Calculate">
+    <h1>Grade Level Checker</h1>
+    <form method="post" action="">
+        <label for="grade">Enter Grade:</label>
+        <input type="number" id="grade" name="grade" required>
+        <button type="submit">Check Level</button>
     </form>
 
     <?php
-    if (isset($_POST['submit'])) {
-        $hours = $_POST['hours'];
-        $hourly_rate = 100; // Example hourly rate
-        $lunch_allowance = 200;
+    function getEducationalLevel($grade) {
+        if ($grade >= 1 && $grade <= 3) {
+            return "Lower Primary";
+        } elseif ($grade >= 4 && $grade <= 6) {
+            return "Upper Primary";
+        } elseif ($grade >= 7 && $grade <= 9) {
+            return "Junior Secondary";
+        } elseif ($grade >= 10 && $grade <= 12) {
+            return "Upper Secondary";
+        } elseif ($grade >= 13 && $grade <= 15) {
+            return "Higher Education";
+        } else {
+            return "Unknown Grade";
+        }
+    }
 
-        $basic_salary = $hours * $hourly_rate;
-        $gross_salary = $basic_salary + $lunch_allowance;
-        $tax = 0.30 * $gross_salary;
-        $net_pay = $gross_salary - $tax;
-
-        echo "<h3>Salary Details:</h3>";
-        echo "Basic Salary: $" . $basic_salary . "<br>";
-        echo "Lunch Allowance: $" . $lunch_allowance . "<br>";
-        echo "Gross Salary: $" . $gross_salary . "<br>";
-        echo "Tax (30%): $" . $tax . "<br>";
-        echo "Net Pay: $" . $net_pay . "<br>";
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $grade = intval($_POST["grade"]);
+        echo "<p>Grade $grade: " . getEducationalLevel($grade) . "</p>";
     }
     ?>
 </body>
 </html>
-
