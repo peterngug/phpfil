@@ -12,7 +12,7 @@ if ($con->connect_error) { // Correct property name
 }
 
 // Use underscores instead of spaces in column names
-$sql = "INSERT INTO Login_detail (Username, Password, Display Name, Email, gender) VALUES ('$Username', '$Password', '$DisplayName', '$Email', '$gender')";
+$sql = "INSERT INTO Login_detail (Username, Password, DisplayName, Email, gender) VALUES ('$Username', '$Password', '$DisplayName', '$Email', '$gender')";
 $result = $con->query($sql);
 
 if ($result) {
