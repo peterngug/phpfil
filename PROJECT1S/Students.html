@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Evaluation</title>
+    <link rel="stylesheet" href="Students.css">
+</head>
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="login.html">Login</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <div class="container">
+        <h1>Student Performance Evaluation System</h1>
+        <h2>Welcome to the Student Performance Evaluation System</h2>
+        <p>This platform helps students track their study hours and predicts their possible grades based on study time.</p>
+    </div>
+    
+    <div class="container form-container">
+        <h2>User Registration</h2>
+        <form action="Students.php" method="POST">
+            <label for="user_id">ID number:</label><br>
+            <input type="text" id="user_id" name="user_id" required><br>
+
+            <label for="full_name">Full Name:</label><br>
+            <input type="text" id="full_name" name="full_name" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="study_hours">Study hours:</label><br>
+            <input type="text" id="study_hours" name="study_hours" required><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
