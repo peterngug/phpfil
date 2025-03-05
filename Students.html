@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Evaluation</title>
+    <link rel="stylesheet" href="Students.css">
+</head>
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="login.html">Login</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <div class="container">
+        <h1>Student Performance Evaluation System</h1>
+        <h2>Welcome to the Student Performance Evaluation System</h2>
+        <p>This platform helps students track their study hours and predicts their possible grades based on study time.</p>
+    </div>
+    
+    <div class="container form-container" id="login" >
+        <h2>User Registration</h2>
+        <form action="Students.php" method="POST">
+            <label for="user_id">ID number:</label><br>
+            <input type="text" id="user_id" name="user_id" required><br>
+
+            <label for="full_name">Full Name:</label><br>
+            <input type="text" id="full_name" name="full_name" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="study_hours">Study hours:</label><br>
+            <input type="text" id="study_hours" name="study_hours" required><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+        <div class="about" id="about" >
+            <center><h1>about x-star</h1></center>
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="imgs/feature-banner.png" alt="">
+                </div>
+                <div class="about-info">
+                    <h2>why us</h2>
+                    <p>
+                      The Student Performance Evaluation System is a system that is aimed at challenging students to 
+                      keep working hard by investing more time in their studies by predicting their grades based on
+                      the time they invest in their studies
+                    </p>
+                    <h2>mission</h2>    
+                    <p>
+                        To provide a platform that will help students to track their study hours and predict their grades
+                        based on the time they invest in their studies. 
+                    </p>
+                    <h2>vision</h2>
+                    <p>
+                        To be the leading platform that helps students to track their study hours and predict their grades
+                        based on the time they invest in their studies. 
+                    </p>
+                   
+                    <h2>values</h2>
+                    <ul type="circle">
+                        <li>innovations</li>
+                        <li>equality</li>
+                        <li>integrity</li>
+                        <li>Excellence</li>
+                    </ul>
+                </div>
+    </div>
+<div class="gallery" id="gallery">
+    <main>
+        <section class="gallery">
+            <div class="card">
+                <img src="HELB.png" alt="Student 1">
+                <h2>John Doe</h2>
+                <p>Grade: A</p>
+                <p>Attendance: 95%</p>
+                <p>Comments: Excellent performance in all subjects.</p>
+            </div>
+
+            <div class="card">
+                <img src="HELB.png" alt="Student 2">
+                <h2>Jane Smith</h2>
+                <p>Grade: B+</p>
+                <p>Attendance: 90%</p>
+                <p>Comments: Good performance, needs improvement in Math.</p>
+            </div>
+
+            <div class="card">
+                <img src="HELB.png" alt="Student 3">
+                <h2>Alice Johnson</h2>
+                <p>Grade: A-</p>
+                <p>Attendance: 92%</p>
+                <p>Comments: Very good performance, consistent effort.</p>
+            </div>
+
+            <div class="card">
+                <img src="HELB.png" alt="Student 4">
+                <h2>Bob Brown</h2>
+                <p>Grade: B</p>
+                <p>Attendance: 88%</p>
+                <p>Comments: Satisfactory performance, needs to participate more.</p>
+            </div>
+
+            <!-- Add more student cards as needed -->
+        </section>
+    </main>
+
+            <h1>Contact Us</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <main>
+            <section class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>If you have any questions or feedback about the Student Performance Evaluation System, feel free to reach out to us.</p>
+                <ul>
+                    <li><strong>Email:</strong> info@studentperformance.com</li>
+                    <li><strong>Phone:</strong> +1 (123) 456-7890</li>
+                    <li><strong>Address:</strong> 123 Education Street, Knowledge City, ABC 12345</li>
+                </ul>
+            </section>
+    
+            <section class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+    
+            <section class="map">
+                <h2>Our Location</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d144.95373531531615!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d2d2b2a4c4c4!2s123%20Education%20St%2C%20Knowledge%20City%2C%20ABC%2012345!5e0!3m2!1sen!2sus!4v162254940
+    <footer>
+        <p>&copy; 2023 Student Performance Evaluation System</p>
+    </footer>
+</div>
+</body>
+</html>
