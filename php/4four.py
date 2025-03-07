@@ -1,0 +1,17 @@
+import mysql.connector  # Importing the MySQL connector module
+
+# Establishing a connection to the MySQL server with specified database
+mydb = mysql.connector.connect(host="localhost", user="root", passwd="", database="kyu")
+
+# Creating a cursor object to interact with the database
+bse = mydb.cursor()
+
+# Executing a SQL query to select all records from the "unit" table
+bse.execute("Select * from unit")
+
+# Fetching all the rows from the executed query and storing them in the variable GEORGE
+GEORGE = bse.fetchall()
+
+# Iterating over each row fetched and printing it
+for i in GEORGE:
+    print(i)
