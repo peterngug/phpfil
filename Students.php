@@ -30,6 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $full_name = $_POST['full_name'];
     $email = $_POST['email'];
     $study_hours = $_POST['study_hours'];
+    $image = $_FILES['image']['tmp_name'];
+    $imgContent = addslashes(file_get_contents($image));
 
     // Determine the grade based on study hours
     if ($study_hours >= 40) {
@@ -51,20 +53,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Insert data into the database
-    $sql = "INSERT INTO students_details (user_id, full_name, email, study_hours, predicted_grade) 
-            VALUES ('$user_id', '$full_name', '$email', '$study_hours', '$grade')";
+    $sql = "INSERT INTO students_details (user_id, full_name, email, study_hours, predicted_grade,photo) 
+            VALUES ('$user_id', '$full_name', '$email', '$study_hours', '$grade','$imgContent')";
     if ($con->query($sql) === TRUE) {
         echo "<script>
                 alert('Record successfully added. Student Performance: Grade $grade');
-                window.location.href = 'Students.html';
+                window.location.href = 'gallery.html';
               </script>";
     } else {
         echo "Error: " . $sql . "<br>" . $con->error;
     }
-
+    if ($conn->query($sql) === TRUE) {
+        echo "Image uploaded successfully.";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
     // Close the database connection
     $con->close();
 } else {
     die("Form not submitted.");
 }
+
 ?>

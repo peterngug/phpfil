@@ -17,7 +17,7 @@
     
     <div class="container form-container" id="login">
         <h2>User Registration</h2>
-        <form action="Students.php" method="POST">
+        <form action="Students.php" method="POST" enctype="multipart/form-data">
             <label for="user_id">ID number:</label><br>
             <input type="text" id="user_id" name="user_id" required><br>
 
@@ -29,6 +29,9 @@
 
             <label for="study_hours">Study hours:</label><br>
             <input type="text" id="study_hours" name="study_hours" required><br>
+
+            <label for="image">Upload Image:</label>
+            <input type="file" name="image" id="image" required><br>
 
             <button type="submit">Submit</button>
         </form>
